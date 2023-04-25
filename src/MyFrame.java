@@ -2,8 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class MyFrame extends JFrame implements ActionListener {
+public class MyFrame extends JFrame implements MouseListener {
+
+    NorthPanel northPanel;
+    SouthPanel southPanel;
+    WestPanel westPanel;
+    CenterPanel centerPanel;
 
     MyFrame(){
 
@@ -11,10 +18,10 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setSize(1280,720);
         this.setLayout(new BorderLayout(10,10));
 
-        NorthPanel northPanel = new NorthPanel();
-        SouthPanel southPanel = new SouthPanel();
-        WestPanel westPanel = new WestPanel();
-        CenterPanel centerPanel = new CenterPanel();
+        northPanel = new NorthPanel();
+        southPanel = new SouthPanel();
+        westPanel = new WestPanel();
+        centerPanel = new CenterPanel();
 
 
         this.add(northPanel, BorderLayout.NORTH);
@@ -22,13 +29,35 @@ public class MyFrame extends JFrame implements ActionListener {
         this.add(westPanel, BorderLayout.WEST);
         this.add(centerPanel, BorderLayout.CENTER);
 
+        this.addMouseListener(this);
+
         this.setVisible(true);
 
     }
 
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        northPanel.toDoListName.setEditable(false);
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
 
     }
 }
