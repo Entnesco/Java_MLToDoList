@@ -10,7 +10,6 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1280,720);
         this.setLayout(new BorderLayout(10,10));
-        this.setVisible(true);
 
         NorthPanel northPanel = new NorthPanel();
         SouthPanel southPanel = new SouthPanel();
@@ -22,6 +21,8 @@ public class MyFrame extends JFrame implements ActionListener {
         this.add(southPanel, BorderLayout.SOUTH);
         this.add(westPanel, BorderLayout.WEST);
         this.add(centerPanel, BorderLayout.CENTER);
+
+        this.setVisible(true);
 
     }
 
