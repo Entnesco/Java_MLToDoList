@@ -22,20 +22,17 @@ public class NorthPanel extends JPanel implements MouseListener {
         toDoListName.setBorder(null);
         toDoListName.setEditable(false);
         toDoListName.setForeground(Color.black);
-        toDoListName.addMouseListener(this);
+        toDoListName.setPreferredSize(new Dimension(1200,90));
+        toDoListName.setHorizontalAlignment(SwingConstants.CENTER);
         toDoListName.setOpaque(true);
+
 
         this.add(toDoListName);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        clicksOnToDoListName++;
-        if(clicksOnToDoListName == 2)
-        {
-            toDoListName.setEditable(true);
-            clicksOnToDoListName = 0;
-        }
+
     }
 
     @Override

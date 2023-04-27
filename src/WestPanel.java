@@ -1,11 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class WestPanel extends JPanel {
+public class WestPanel extends JPanel{
 
     JButton addButton;
     JButton editButton;
     JButton deleteButton;
+
+    int addButtonClicked = 0;
 
     WestPanel(){
         this.setBackground(Color.yellow);
@@ -14,6 +18,7 @@ public class WestPanel extends JPanel {
 
         addButton = new JButton("Add");
         addButton.setPreferredSize(new Dimension(90,40));
+
         editButton = new JButton("Edit");
         editButton.setPreferredSize(new Dimension(90,40));
         deleteButton = new JButton("Delete");
@@ -23,4 +28,5 @@ public class WestPanel extends JPanel {
         this.add(editButton);
         this.add(deleteButton);
     }
+
 }
