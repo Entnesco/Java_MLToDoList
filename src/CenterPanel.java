@@ -9,7 +9,6 @@ public class CenterPanel extends JPanel {
     ListPanel panel4;
     ListPanel panel5;
 
-    JTextField textField1;
     CenterPanel(){
         this.setBackground(Color.blue);
         this.setPreferredSize(new Dimension(100,100));

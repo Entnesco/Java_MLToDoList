@@ -30,11 +30,11 @@ public class MyFrame extends JFrame implements MouseListener, ActionListener{
         westPanel.addButton.addActionListener(this);
         westPanel.deleteButton.addActionListener(this);
         toDoListName=northPanel.toDoListName;
-        centerPanel.panel1.textField.addMouseListener(this);
-        centerPanel.panel2.textField.addMouseListener(this);
-        centerPanel.panel3.textField.addMouseListener(this);
-        centerPanel.panel4.textField.addMouseListener(this);
-        centerPanel.panel5.textField.addMouseListener(this);
+        centerPanel.panel1.listTitle.addMouseListener(this);
+        centerPanel.panel2.listTitle.addMouseListener(this);
+        centerPanel.panel3.listTitle.addMouseListener(this);
+        centerPanel.panel4.listTitle.addMouseListener(this);
+        centerPanel.panel5.listTitle.addMouseListener(this);
 
         this.add(northPanel, BorderLayout.NORTH);
         this.add(southPanel, BorderLayout.SOUTH);
@@ -57,11 +57,11 @@ public class MyFrame extends JFrame implements MouseListener, ActionListener{
     @Override
     public void mousePressed(MouseEvent e) {
         toDoListName.setEditable(e.getSource() == toDoListName);
-        centerPanel.panel1.textField.setEditable(e.getSource()==centerPanel.panel1.textField);
-        centerPanel.panel2.textField.setEditable(e.getSource()==centerPanel.panel2.textField);
-        centerPanel.panel3.textField.setEditable(e.getSource()==centerPanel.panel3.textField);
-        centerPanel.panel4.textField.setEditable(e.getSource()==centerPanel.panel4.textField);
-        centerPanel.panel5.textField.setEditable(e.getSource()==centerPanel.panel5.textField);
+        centerPanel.panel1.listTitle.setEditable(e.getSource()==centerPanel.panel1.listTitle);
+        centerPanel.panel2.listTitle.setEditable(e.getSource()==centerPanel.panel2.listTitle);
+        centerPanel.panel3.listTitle.setEditable(e.getSource()==centerPanel.panel3.listTitle);
+        centerPanel.panel4.listTitle.setEditable(e.getSource()==centerPanel.panel4.listTitle);
+        centerPanel.panel5.listTitle.setEditable(e.getSource()==centerPanel.panel5.listTitle);
 
     }
 
