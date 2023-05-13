@@ -6,11 +6,12 @@ import java.awt.event.ActionListener;
 public class Main{
     public static void main(String[] args) {
 
-        new MyFrame();
-        new MyTimer(20, new ActionListener() {
+        MyFrame myFrame = new MyFrame();
+        new MyTimer(50, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                myFrame.getContentPane().revalidate();
+                myFrame.getContentPane().repaint();
             }
         });
 

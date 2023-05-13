@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d38f4bf-3b89-400e-9909-bbf7a8381941" name="Changes" comment="add mouse listener to MyFrame">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/CenterPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/CenterPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/ListPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/ListPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/MyFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/MyFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/NorthPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/NorthPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MLToDoList/WestPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MLToDoList/WestPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CenterPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CenterPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NorthPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NorthPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WestPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WestPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +46,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projekty/Java/MLToDoList&quot;
   }
 }</component>
   <component name="RunManager">

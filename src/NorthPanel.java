@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class NorthPanel extends JPanel implements MouseListener {
+public class NorthPanel extends JPanel{
 
     JTextField toDoListName;
     int clicksOnToDoListName = 0;
@@ -30,29 +30,5 @@ public class NorthPanel extends JPanel implements MouseListener {
         this.add(toDoListName);
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
 
 }

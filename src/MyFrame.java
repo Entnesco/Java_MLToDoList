@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class MyFrame extends JFrame implements MouseListener, ActionListener{
+public class MyFrame extends JFrame implements MouseListener{
 
     NorthPanel northPanel;
     SouthPanel southPanel;
@@ -13,6 +13,24 @@ public class MyFrame extends JFrame implements MouseListener, ActionListener{
     CenterPanel centerPanel;
 
     JTextField toDoListName;
+
+    MyTimer timer;
+
+    ActionListener listener = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            for(int idPanel = 0; idPanel < centerPanel.quantityPanels; idPanel++) {
+                if(westPanel.addButtonClicked > idPanel){
+                    centerPanel.panels[idPanel].setVisible(true);
+                }
+                else {
+                    centerPanel.panels[idPanel].setVisible(false);
+                    centerPanel.panels[idPanel].listTitle.setText("Panel " + idPanel);
+                }
+
+            }
+        }
+    };
 
     MyFrame(){
 
@@ -27,25 +45,32 @@ public class MyFrame extends JFrame implements MouseListener, ActionListener{
         westPanel = new WestPanel();
         centerPanel = new CenterPanel();
 
-        westPanel.addButton.addActionListener(this);
-        westPanel.deleteButton.addActionListener(this);
+        //Mouse Listeners
         toDoListName=northPanel.toDoListName;
-        centerPanel.panel1.listTitle.addMouseListener(this);
-        centerPanel.panel2.listTitle.addMouseListener(this);
-        centerPanel.panel3.listTitle.addMouseListener(this);
-        centerPanel.panel4.listTitle.addMouseListener(this);
-        centerPanel.panel5.listTitle.addMouseListener(this);
+        for(int idPanel = 0; idPanel < centerPanel.quantityPanels; idPanel++) {
+            centerPanel.panels[idPanel].listTitle.addMouseListener(this);
+            for(int idText = 0; idText < centerPanel.panels[idPanel].elements; idText++){
+                centerPanel.panels[idPanel].text[idText].addMouseListener(this);
+            }
+        }
+        this.addMouseListener(this);
 
         this.add(northPanel, BorderLayout.NORTH);
         this.add(southPanel, BorderLayout.SOUTH);
         this.add(westPanel, BorderLayout.WEST);
         this.add(centerPanel, BorderLayout.CENTER);
 
-        this.addMouseListener(this);
+
         toDoListName.addMouseListener(this);
+        northPanel.addMouseListener(this);
+        southPanel.addMouseListener(this);
+        westPanel.addMouseListener(this);
+        centerPanel.addMouseListener(this);
+
 
         this.setVisible(true);
 
+        timer = new MyTimer(50, listener);
     }
 
 
@@ -56,12 +81,15 @@ public class MyFrame extends JFrame implements MouseListener, ActionListener{
 
     @Override
     public void mousePressed(MouseEvent e) {
+        //Enable or Disable Editability of JTextsFields
         toDoListName.setEditable(e.getSource() == toDoListName);
-        centerPanel.panel1.listTitle.setEditable(e.getSource()==centerPanel.panel1.listTitle);
-        centerPanel.panel2.listTitle.setEditable(e.getSource()==centerPanel.panel2.listTitle);
-        centerPanel.panel3.listTitle.setEditable(e.getSource()==centerPanel.panel3.listTitle);
-        centerPanel.panel4.listTitle.setEditable(e.getSource()==centerPanel.panel4.listTitle);
-        centerPanel.panel5.listTitle.setEditable(e.getSource()==centerPanel.panel5.listTitle);
+        for(int idPanels = 0; idPanels < centerPanel.quantityPanels; idPanels++) {
+            centerPanel.panels[idPanels].listTitle.setEditable(e.getSource()==centerPanel.panels[idPanels].listTitle);
+
+            for(int idText = 0; idText < centerPanel.panels[idPanels].elements; idText++){
+                centerPanel.panels[idPanels].text[idText].setEditable(e.getSource()==centerPanel.panels[idPanels].text[idText]);
+            }
+        }
 
     }
 
@@ -80,25 +108,4 @@ public class MyFrame extends JFrame implements MouseListener, ActionListener{
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==westPanel.addButton){
-            westPanel.addButtonClicked++;
-            if(westPanel.addButtonClicked>5) westPanel.addButtonClicked=5;
-        }
-
-        if(e.getSource()==westPanel.deleteButton){
-            westPanel.addButtonClicked--;
-            if(westPanel.addButtonClicked<0) westPanel.addButtonClicked=0;
-        }
-
-        centerPanel.panel1.setVisible(westPanel.addButtonClicked >= 1);
-        centerPanel.panel2.setVisible(westPanel.addButtonClicked >= 2);
-        centerPanel.panel3.setVisible(westPanel.addButtonClicked >= 3);
-        centerPanel.panel4.setVisible(westPanel.addButtonClicked >= 4);
-        centerPanel.panel5.setVisible(westPanel.addButtonClicked >= 5);
-
-
-
-    }
 }
